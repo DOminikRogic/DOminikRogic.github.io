@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>United Federation of Planets</title>
+   
+    <link rel="icon" type="image/x-icon" href="Star-Trek-logo-removebg-preview.ico">
+    <style>
+
+    @font-face{
+        font-family: Designer;
+        src:url(Designer.otf);
+
+    }
+
+    body{
+        text-align: center;
+        font-family:Designer;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1{
+        font-size:45px;   
+    }
+
+    hr{
+        border:5px solid black;
+    }
+
+    table{
+        border-collapse: collapse;
+    }
+
+    td{
+        border-bottom:5px solid black;
+        border-collapse: collapse;   
+    }
+
+    th{
+        border-collapse: collapse;
+    }
+
+    a{
+        color:#000000;
+            text-decoration: none;
+    }
+
+    a:hover{
+        color:#000;
+            text-decoration: none;
+    }
+
+    a:active{
+        color:#000;
+            text-decoration: none;
+    }
+
+    a:visited{
+        color:#000;
+            text-decoration: nones;
+    }
+
+    .slik{
+        transform: scale(1);
+        translate: 0px 0px ;
+        transition: 2s;
+    } 
+
+    .slik:hover{
+        transform: scale(4);
+        translate: -475px 0px ;
+        transition: 2s;            
+    }
+</style>
+<script>
+    window.setInterval(function() {
+        calculateStardate();
+      }, 1000);
+    function calculateStardate() {
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var day = today.getDate();
+        var hours = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+        
+        var totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+        var totalMinutes = (day * 1440) + (totalSeconds / 60);
+        var totalDays = (365.25 * (year - 2005)) + ((month - 1) * 30) + day;
+        var stardate = Math.round((totalDays + (totalMinutes / 1440)) * 100) / 100;
+        
+        console.log('Stardate:', stardate); // add this line
+        document.getElementById("stardate").textContent = stardate;
+    }
+</script>
+</head>
+<body onload="calculateStardate()">
+    <table width="100%">
+        <tr>
+            <td colspan="3" style="text-align:center;">
+                <img src="United_Federation_of_Planets_flag.png" width="200px" style="float:left; border-radius:8px;">
+                <div class="stardates" style="float:right; padding-right: 100px; ">
+                    <h2 >Stardate:</br>
+                    <span id="stardate" ></span></p>
+                    
+                </h2>
+            </div>
+                <h1 style="text-align:center; width:90%; " id="section2">United Federation of Planets</h1>
+                
+            </td>
+        </tr>
+        <tr>
+            <th style="border-right:5px solid black; border-top:5px solid black;" width="15%">
+                <h2>Membering Planets</h2>
+                <a href="Earth.html"><img src="Earth.png" width="95%"></a>
+                <a href="Earth.html"><h2>Earth</h2></a>
+                <a href="Vulcan.html"><img src="Vulcan.png" width="95%"></a>
+                <a href="Vulcan.html"><h2>Vulcan</h2></a>
+                <a href="Tellar.html"><img src="Tellar_prime.png" width="95%"></a>
+                <a href="Tellar.html"><h2>Tellar-prime</h2></a>
+                <a href="Andoria.html"><img src="Andoria.png" width="95%"></a>   
+                <a href="Andoria.html"><h2>Andoria</h2></a>
+                <a href="Ferenginar.html"><img src="Ferenginar.png" width="105%"> </a>  
+                <a href="Ferenginar.html"><h2>Ferenginar</h2></a>
+            </th>
+            <th ><a href="enterprise.html"><img src="preuzmi.jpg" width="40%" style="border-radius:20px;"></a>
+            <a href="enterprise.html"><h2>USS Enterprise NCC-1701-D</h2></a>
+            <a href="Voyager.html"><img src="Voyger.jpg" width="40%" style="border-radius:20px;"></a>
+            <a href="Voyager.html"><h2>USS Voyger NCC-74656</h2></a>
+            <a href="Defiant.html"><img src="Defiant.jpg" width="40%" style="border-radius:20px;"></a>
+            <a href="Defiant.html"><h2>USS Defiant NX-74205</h2></a>
+            <a href="Excelsior.html"><img src="Exelcior.jpeg" width="40%" style="border-radius:20px;"></a>
+            <a href="Excelsior.html"><h2>USS Excelsior NCC-2000</h2></a>
+            </th>
+            <th style="border-left:5px solid black; padding-left:10px;" width="20%">
+
+                <h2>Anthem</h2>
+                <video width="100%" height="100%" controls style="border-radius: 20px;background-color: black;">
+                    <source src="Anthem.mp4" type="video/mp4">
+                    
+                    Your browser does not support the video tag.
+                  </video>
+
+                <h3>San francisco</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201880.51115438552!2d-122.57768437848272!3d37.757617097271385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20Kalifornija%2C%20Sjedinjene%20Ameri%C4%8Dke%20Dr%C5%BEave!5e0!3m2!1shr!2shr!4v1679334767744!5m2!1shr!2shr" width="90%" height="100%" style="border:5px black solid; border-radius:20px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h3 style="padding-top: 100px;">Federation headquarters</h3>
+                <div class="slik" >
+                    
+                <img src="Federation_Council_grounds.jpg" style="width:100%;border-radius:20px;">
+            </div>
+            
+            </th>
+            
+        </tr>
+        
+        
+    </table>
+    <a href="#section2">Go to the top</a>
+    
+</body>
+</html>
