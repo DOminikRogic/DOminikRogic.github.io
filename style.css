@@ -25,6 +25,7 @@ body, html {
     background-repeat: no-repeat;
     background-image: url("city.gif");
     transition: opacity 1s ease;
+    z-index: -1;
 }
 
 .header {
@@ -41,14 +42,30 @@ body, html {
     margin-top: 2%;
     z-index: 1;
 }
-
+.info{
+    width: 75%;
+    height: 50%;
+    background-color: black;
+    margin-left:5%;
+    margin-top:5%;
+}
 h1 {
     font-family: "Pressstart";
     color: white;
     margin: 0;
     padding: 10px;
 }
-
+h2 {
+    font-family: "Pressstart";
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-size: 100%;
+}
+#ime{
+    position: relative;
+    margin-left:45%
+}
 .youtube {
     width: 100px;
     height: auto;
