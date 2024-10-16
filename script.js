@@ -23,7 +23,7 @@ function updateTime() {
 }
 
 // Set the countdown date (target date)
-var countDownDate = new Date(Date.UTC(2024, 11, 31, 0, 0, 0));
+var countDownDate = new Date("2024-12-31T00:00:00Z");
 
 // Update the countdown every 1 second
 var x = setInterval(function() {
